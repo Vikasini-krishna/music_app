@@ -31,13 +31,13 @@ const ChatPage = () => {
 	console.log({ messages });
 
 	return (
-		<main className='h-full rounded-lg bg-gradient-to-b from-zinc-800 to-zinc-900 overflow-hidden'>
+		<main className='h-full rounded-lg bg-gradient-to-r from-purple-400 to-purple-900 overflow-hidden'>
 			<Topbar />
 
 			<div className='grid lg:grid-cols-[300px_1fr] grid-cols-[80px_1fr] h-[calc(100vh-180px)]'>
 				<UsersList />
 
-				{/* chat message */}
+				{/* Chat message */}
 				<div className='flex flex-col h-full'>
 					{selectedUser ? (
 						<>
@@ -88,6 +88,7 @@ const ChatPage = () => {
 		</main>
 	);
 };
+
 export default ChatPage;
 
 const NoConversationPlaceholder = () => (

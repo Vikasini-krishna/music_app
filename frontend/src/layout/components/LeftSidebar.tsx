@@ -20,15 +20,15 @@ const LeftSidebar = () => {
 	return (
 		<div className='h-full flex flex-col gap-2'>
 			{/* Navigation menu */}
-
-			<div className='rounded-lg bg-zinc-900 p-4'>
+			<div className='rounded-lg bg-gradient-to-b from-purple-300 to-purple-900 p-4 shadow-lg'>
 				<div className='space-y-2'>
 					<Link
 						to={"/"}
 						className={cn(
 							buttonVariants({
 								variant: "ghost",
-								className: "w-full justify-start text-white hover:bg-zinc-800",
+								className:
+									"w-full justify-start text-purple-900 hover:bg-purple-600/80 transition duration-300 shadow-sm",
 							})
 						)}
 					>
@@ -42,7 +42,8 @@ const LeftSidebar = () => {
 							className={cn(
 								buttonVariants({
 									variant: "ghost",
-									className: "w-full justify-start text-white hover:bg-zinc-800",
+									className:
+										"w-full justify-start text-purple-900 hover:bg-purple-600/80 transition duration-300 shadow-sm",
 								})
 							)}
 						>
@@ -54,9 +55,9 @@ const LeftSidebar = () => {
 			</div>
 
 			{/* Library section */}
-			<div className='flex-1 rounded-lg bg-zinc-900 p-4'>
+			<div className='flex-1 rounded-lg bg-gradient-to-b from-purple-300 to-purple-900 p-4 shadow-lg'>
 				<div className='flex items-center justify-between mb-4'>
-					<div className='flex items-center text-white px-2'>
+					<div className='flex items-center text-purple-900 px-2 font-semibold'>
 						<Library className='size-5 mr-2' />
 						<span className='hidden md:inline'>Playlists</span>
 					</div>
@@ -71,17 +72,21 @@ const LeftSidebar = () => {
 								<Link
 									to={`/albums/${album._id}`}
 									key={album._id}
-									className='p-2 hover:bg-zinc-800 rounded-md flex items-center gap-3 group cursor-pointer'
+									className='p-2 rounded-md flex items-center gap-3 group cursor-pointer bg-purple-400/50 hover:bg-purple-600/80 transition duration-300 shadow-md'
 								>
 									<img
 										src={album.imageUrl}
 										alt='Playlist img'
-										className='size-12 rounded-md flex-shrink-0 object-cover'
+										className='size-12 rounded-md flex-shrink-0 object-cover shadow-md'
 									/>
 
 									<div className='flex-1 min-w-0 hidden md:block'>
-										<p className='font-medium truncate'>{album.title}</p>
-										<p className='text-sm text-zinc-400 truncate'>Album • {album.artist}</p>
+										<p className='font-medium truncate text-purple-900 drop-shadow-md'>
+											{album.title}
+										</p>
+										<p className='text-sm text-purple-700 truncate drop-shadow-sm'>
+											Album • {album.artist}
+										</p>
 									</div>
 								</Link>
 							))
