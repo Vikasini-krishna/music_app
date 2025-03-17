@@ -112,6 +112,7 @@ export const useMusicStore = create<MusicStore>((set) => ({
 			set({ isLoading: false });
 		}
 	},
+	  
 
 	fetchAlbumById: async (id) => {
 		set({ isLoading: true, error: null });
