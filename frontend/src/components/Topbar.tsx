@@ -17,7 +17,7 @@ const Topbar = () => {
     '
 		>
 			<div className='flex gap-2 items-center text-white font-semibold'>
-				<img src='/spotify.png' className='size-8' alt='Spotify logo' />
+				<img src='/MusicPlex.png' className='size-8' alt='Spotify logo' />
 				MusicPlex
 			</div>
 			<div className='flex items-center gap-4'>
