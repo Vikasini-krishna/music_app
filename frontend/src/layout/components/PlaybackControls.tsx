@@ -50,7 +50,7 @@ export const PlaybackControls = () => {
 	};
 
 	return (
-		<footer className='h-20 sm:h-24 bg-zinc-900 border-t border-zinc-800 px-4'>
+		<footer className='h-20 sm:h-24 bg-[#2D1B4A] border-t border-[#4A306D] px-4'>
 			<div className='flex justify-between items-center h-full max-w-[1800px] mx-auto'>
 				{/* currently playing song */}
 				<div className='hidden sm:flex items-center gap-4 min-w-[180px] w-[30%]'>
@@ -62,10 +62,10 @@ export const PlaybackControls = () => {
 								className='w-14 h-14 object-cover rounded-md'
 							/>
 							<div className='flex-1 min-w-0'>
-								<div className='font-medium truncate hover:underline cursor-pointer'>
+								<div className='font-medium truncate hover:underline cursor-pointer text-[#D0A2F7]'>
 									{currentSong.title}
 								</div>
-								<div className='text-sm text-zinc-400 truncate hover:underline cursor-pointer'>
+								<div className='text-sm text-[#B891D9] truncate hover:underline cursor-pointer'>
 									{currentSong.artist}
 								</div>
 							</div>
@@ -79,7 +79,7 @@ export const PlaybackControls = () => {
 						<Button
 							size='icon'
 							variant='ghost'
-							className='hidden sm:inline-flex hover:text-white text-zinc-400'
+							className='hidden sm:inline-flex text-[#B891D9] hover:text-white'
 						>
 							<Shuffle className='h-4 w-4' />
 						</Button>
@@ -87,7 +87,7 @@ export const PlaybackControls = () => {
 						<Button
 							size='icon'
 							variant='ghost'
-							className='hover:text-white text-zinc-400'
+							className='text-[#B891D9] hover:text-white'
 							onClick={playPrevious}
 							disabled={!currentSong}
 						>
@@ -96,7 +96,7 @@ export const PlaybackControls = () => {
 
 						<Button
 							size='icon'
-							className='bg-white hover:bg-white/80 text-black rounded-full h-8 w-8'
+							className='bg-[#916BBF] hover:bg-[#B891D9] text-white rounded-full h-8 w-8'
 							onClick={togglePlay}
 							disabled={!currentSong}
 						>
@@ -105,7 +105,7 @@ export const PlaybackControls = () => {
 						<Button
 							size='icon'
 							variant='ghost'
-							className='hover:text-white text-zinc-400'
+							className='text-[#B891D9] hover:text-white'
 							onClick={playNext}
 							disabled={!currentSong}
 						>
@@ -114,38 +114,38 @@ export const PlaybackControls = () => {
 						<Button
 							size='icon'
 							variant='ghost'
-							className='hidden sm:inline-flex hover:text-white text-zinc-400'
+							className='hidden sm:inline-flex text-[#B891D9] hover:text-white'
 						>
 							<Repeat className='h-4 w-4' />
 						</Button>
 					</div>
 
 					<div className='hidden sm:flex items-center gap-2 w-full'>
-						<div className='text-xs text-zinc-400'>{formatTime(currentTime)}</div>
+						<div className='text-xs text-[#B891D9]'>{formatTime(currentTime)}</div>
 						<Slider
 							value={[currentTime]}
 							max={duration || 100}
 							step={1}
-							className='w-full hover:cursor-grab active:cursor-grabbing'
+							className='w-full hover:cursor-grab active:cursor-grabbing bg-[#916BBF]'
 							onValueChange={handleSeek}
 						/>
-						<div className='text-xs text-zinc-400'>{formatTime(duration)}</div>
+						<div className='text-xs text-[#B891D9]'>{formatTime(duration)}</div>
 					</div>
 				</div>
 				{/* volume controls */}
 				<div className='hidden sm:flex items-center gap-4 min-w-[180px] w-[30%] justify-end'>
-					<Button size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
+					<Button size='icon' variant='ghost' className='text-[#B891D9] hover:text-white'>
 						<Mic2 className='h-4 w-4' />
 					</Button>
-					<Button size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
+					<Button size='icon' variant='ghost' className='text-[#B891D9] hover:text-white'>
 						<ListMusic className='h-4 w-4' />
 					</Button>
-					<Button size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
+					<Button size='icon' variant='ghost' className='text-[#B891D9] hover:text-white'>
 						<Laptop2 className='h-4 w-4' />
 					</Button>
 
 					<div className='flex items-center gap-2'>
-						<Button size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
+						<Button size='icon' variant='ghost' className='text-[#B891D9] hover:text-white'>
 							<Volume1 className='h-4 w-4' />
 						</Button>
 
@@ -153,7 +153,7 @@ export const PlaybackControls = () => {
 							value={[volume]}
 							max={100}
 							step={1}
-							className='w-24 hover:cursor-grab active:cursor-grabbing'
+							className='w-24 hover:cursor-grab active:cursor-grabbing bg-[#916BBF]'
 							onValueChange={(value) => {
 								setVolume(value[0]);
 								if (audioRef.current) {

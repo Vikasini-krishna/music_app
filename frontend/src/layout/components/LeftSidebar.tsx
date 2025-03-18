@@ -19,8 +19,8 @@ const LeftSidebar = () => {
 
 	return (
 		<div className='h-full flex flex-col gap-2'>
-			{/* Navigation menu */}
-			<div className='rounded-lg bg-gradient-to-b from-purple-300 to-purple-900 p-4 shadow-lg'>
+			{/* Navigation Menu */}
+			<div className='rounded-lg bg-gradient-to-r from-[#9B59B6] to-[#6A1B9A] p-4 shadow-lg'>
 				<div className='space-y-2'>
 					<Link
 						to={"/"}
@@ -28,7 +28,7 @@ const LeftSidebar = () => {
 							buttonVariants({
 								variant: "ghost",
 								className:
-									"w-full justify-start text-purple-900 hover:bg-purple-600/80 transition duration-300 shadow-sm",
+									"w-full justify-start text-white hover:bg-[#8846A3]/80 transition duration-300 shadow-sm",
 							})
 						)}
 					>
@@ -43,7 +43,7 @@ const LeftSidebar = () => {
 								buttonVariants({
 									variant: "ghost",
 									className:
-										"w-full justify-start text-purple-900 hover:bg-purple-600/80 transition duration-300 shadow-sm",
+										"w-full justify-start text-white hover:bg-[#8846A3]/80 transition duration-300 shadow-sm",
 								})
 							)}
 						>
@@ -54,10 +54,10 @@ const LeftSidebar = () => {
 				</div>
 			</div>
 
-			{/* Library section */}
-			<div className='flex-1 rounded-lg bg-gradient-to-b from-purple-300 to-purple-900 p-4 shadow-lg'>
+			{/* Library Section */}
+			<div className='flex-1 rounded-lg bg-gradient-to-r from-[#9B59B6] to-[#6A1B9A] p-4 shadow-lg'>
 				<div className='flex items-center justify-between mb-4'>
-					<div className='flex items-center text-purple-900 px-2 font-semibold'>
+					<div className='flex items-center text-white px-2 font-semibold'>
 						<Library className='size-5 mr-2' />
 						<span className='hidden md:inline'>Playlists</span>
 					</div>
@@ -72,7 +72,7 @@ const LeftSidebar = () => {
 								<Link
 									to={`/albums/${album._id}`}
 									key={album._id}
-									className='p-2 rounded-md flex items-center gap-3 group cursor-pointer bg-purple-400/50 hover:bg-purple-600/80 transition duration-300 shadow-md'
+									className='p-2 rounded-md flex items-center gap-3 group cursor-pointer bg-[#8F4FB1]/50 hover:bg-[#793D97]/80 transition duration-300 shadow-md'
 								>
 									<img
 										src={album.imageUrl}
@@ -81,10 +81,10 @@ const LeftSidebar = () => {
 									/>
 
 									<div className='flex-1 min-w-0 hidden md:block'>
-										<p className='font-medium truncate text-purple-900 drop-shadow-md'>
+										<p className='font-medium truncate text-white drop-shadow-md'>
 											{album.title}
 										</p>
-										<p className='text-sm text-purple-700 truncate drop-shadow-sm'>
+										<p className='text-sm text-white/80 truncate drop-shadow-sm'>
 											Album • {album.artist}
 										</p>
 									</div>
@@ -97,4 +97,5 @@ const LeftSidebar = () => {
 		</div>
 	);
 };
+
 export default LeftSidebar;

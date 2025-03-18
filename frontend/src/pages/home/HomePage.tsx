@@ -33,8 +33,8 @@ const HomePage = () => {
 	}, [initializeQueue, madeForYouSongs, trendingSongs, featuredSongs]);
 
 	return (
-		<main className='rounded-md overflow-hidden h-full bg-gradient-to-r from-purple-400 to-purple-900'>
-			<Topbar />
+<main className='rounded-md overflow-hidden h-full bg-gradient-to-r from-[#9B59B6] to-[#6A1B9A]'>
+<Topbar />
 			<ScrollArea className='h-[calc(100vh-180px)]'>
 				<div className='p-4 sm:p-6'>
 					<h1 className='text-2xl sm:text-3xl font-bold mb-6'>Good afternoon</h1>
